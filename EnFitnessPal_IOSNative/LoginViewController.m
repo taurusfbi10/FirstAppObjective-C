@@ -166,9 +166,10 @@
         [storeResponseObject synchronize];
         
         [self stopLoading];
-        HomeViewController *homeNavigation = [self.storyboard instantiateViewControllerWithIdentifier:@"Home"];
+//        HomeViewController *homeNavigation = [self.storyboard instantiateViewControllerWithIdentifier:@"Home"];
+        UITabBarController *tabBarController = [self.storyboard instantiateViewControllerWithIdentifier:@"TabBar"];
         [self.navigationController setNavigationBarHidden:YES animated:NO];
-        [self.navigationController setViewControllers:@[homeNavigation] animated:YES];
+        [self.navigationController setViewControllers:@[tabBarController] animated:YES];
 //        [UIApplication sharedApplication].delegate.window.rootViewController = self.navigationController;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"POST request failed, error: %@", error);

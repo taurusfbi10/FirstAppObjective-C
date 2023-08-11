@@ -27,12 +27,12 @@
     NSLog(@"isLoggedIn: %hhd",isLoggedIn);
     if (isLoggedIn) {
         // Người dùng đã đăng nhập, chuyển đến trang home
-        HomeViewController *homeViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"Home"];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:homeViewController];
+        UITabBarController *tabBarController = [mainStoryboard instantiateViewControllerWithIdentifier:@"TabBar"];
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
         [_window setRootViewController:navController];
         [_window makeKeyAndVisible];
         [navController setNavigationBarHidden:YES animated:NO];
-        [navController setViewControllers:@[homeViewController] animated:YES];
+        [navController setViewControllers:@[tabBarController] animated:YES];
     } else {
         LoginViewController *loginViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"Login"];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];

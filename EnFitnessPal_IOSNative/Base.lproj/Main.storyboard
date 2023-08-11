@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -162,27 +163,12 @@
             </objects>
             <point key="canvasLocation" x="1074.4000000000001" y="-34.729064039408868"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="RrS-cn-GRn">
-            <objects>
-                <viewController id="SxD-DH-b9D" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LKF-gt-DZB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Op2-Lc-rQK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lSt-2Y-yh6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1074" y="814"/>
-        </scene>
         <!--Register View Controller-->
         <scene sceneID="2ng-cP-vC9">
             <objects>
                 <viewController id="mFB-GP-Jiy" customClass="RegisterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EnK-UT-ctE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="901"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="911"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w4Y-2u-evl">
@@ -340,9 +326,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ArZ-BM-sSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848.8" y="-35.837438423645324"/>
+            <point key="canvasLocation" x="2017" y="-34"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="2Hb-im-bhH">
             <objects>
                 <viewController storyboardIdentifier="Home" id="qQh-Qo-n0w" customClass="HomeViewController" sceneMemberID="viewController">
@@ -399,20 +385,6 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfQ-TJ-DS8">
-                                <rect key="frame" x="25" y="598" width="325" height="34.333333333333371"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Local Notification">
-                                    <backgroundConfiguration key="background" cornerRadius="17">
-                                        <color key="backgroundColor" name="LoginButton"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
-                                    <color key="baseForegroundColor" white="0.93999999999999995" alpha="1" colorSpace="calibratedWhite"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="btnLocalNotification:" destination="qQh-Qo-n0w" eventType="touchUpInside" id="Jbq-gT-qlo"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBx-Ey-Tq7">
                                 <rect key="frame" x="50" y="675" width="275" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
@@ -425,6 +397,20 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btnLogout:" destination="qQh-Qo-n0w" eventType="touchUpInside" id="eh6-tn-OgV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfQ-TJ-DS8">
+                                <rect key="frame" x="25" y="598" width="325" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Local Notification">
+                                    <backgroundConfiguration key="background" cornerRadius="17">
+                                        <color key="backgroundColor" name="LoginButton"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="baseForegroundColor" white="0.93999999999999995" alpha="1" colorSpace="calibratedWhite"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnLocalNotification:" destination="qQh-Qo-n0w" eventType="touchUpInside" id="Jbq-gT-qlo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -443,6 +429,15 @@
                             <constraint firstItem="NBx-Ey-Tq7" firstAttribute="leading" secondItem="sRy-EU-Ape" secondAttribute="leading" constant="50" id="diy-d6-u0I"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" id="ihE-XQ-3Oc">
+                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="default" renderingMode="hierarchical-single" variableValue="0.0">
+                            <hierarchicalColors>
+                                <color systemColor="systemOrangeColor"/>
+                                <color name="LoginButton"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="mHt-E2-gqK"/>
                     <connections>
                         <outlet property="tableView" destination="VU7-an-PPI" id="dRd-1x-diL"/>
@@ -450,7 +445,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xma-xh-Ep4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="814"/>
+            <point key="canvasLocation" x="914" y="731"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="SdU-ic-XTQ">
+            <objects>
+                <viewController storyboardIdentifier="Settings" id="v5E-lG-kou" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bdv-KW-Qen">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kn-Nu-XAc">
+                                <rect key="frame" x="25" y="372" width="325" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Custom Alert">
+                                    <backgroundConfiguration key="background" cornerRadius="17">
+                                        <color key="backgroundColor" name="LoginButton"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showAlert:" destination="v5E-lG-kou" eventType="touchUpInside" id="Aud-Tg-vWR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zdk-Z4-ZF7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Kn-Nu-XAc" firstAttribute="centerX" secondItem="zdk-Z4-ZF7" secondAttribute="centerX" id="9Xa-iq-FCc"/>
+                            <constraint firstItem="9Kn-Nu-XAc" firstAttribute="centerY" secondItem="zdk-Z4-ZF7" secondAttribute="centerY" id="Be6-1q-2wj"/>
+                            <constraint firstItem="9Kn-Nu-XAc" firstAttribute="leading" secondItem="zdk-Z4-ZF7" secondAttribute="leading" constant="25" id="W5T-6T-OB4"/>
+                            <constraint firstItem="zdk-Z4-ZF7" firstAttribute="trailing" secondItem="9Kn-Nu-XAc" secondAttribute="trailing" constant="25" id="erV-mH-zeg"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="wUr-ai-hPU">
+                        <imageReference key="image" image="gearshape.fill" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color systemColor="systemOrangeColor"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="alertView" destination="mFT-nt-wdR" id="ZR6-IS-eYU"/>
+                        <outlet property="blurView" destination="8lf-b7-K9x" id="gQY-XU-V1G"/>
+                        <outlet property="cancelBtn" destination="pKD-es-Oeg" id="zgG-HG-a9Z"/>
+                        <outlet property="okBtn" destination="fr5-pA-SXb" id="Tbk-Yi-8zU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRW-Gy-UWT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="vXr-e2-eNq">
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="140"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8lf-b7-K9x">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="140"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" id="mFT-nt-wdR">
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="140"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr5-pA-SXb">
+                            <rect key="frame" x="0.0" y="105" width="125" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="OK">
+                                <backgroundConfiguration key="background" cornerRadius="0.0">
+                                    <color key="backgroundColor" name="LoginButton"/>
+                                </backgroundConfiguration>
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="okBtn:" destination="v5E-lG-kou" eventType="touchUpInside" id="n4I-FG-kdG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKD-es-Oeg">
+                            <rect key="frame" x="125" y="105" width="125" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                <backgroundConfiguration key="background" cornerRadius="0.0">
+                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </backgroundConfiguration>
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="cancelBtn:" destination="v5E-lG-kou" eventType="touchUpInside" id="gFk-0L-J2a"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="M9A-lC-UnN"/>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="2806" y="1309"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C9p-dk-0xM">
@@ -462,21 +557,59 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="98L-W8-aaD"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQ3-Fs-fiG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-34.729064039408868"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LtF-B4-coe">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBar" automaticallyAdjustsScrollViewInsets="NO" id="lF4-kq-son" customClass="TabBarController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XZC-tw-cud">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemOrangeColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qQh-Qo-n0w" kind="relationship" relationship="viewControllers" id="MOk-43-w2V"/>
+                        <segue destination="v5E-lG-kou" kind="relationship" relationship="viewControllers" id="FrQ-tO-i3f"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czd-Th-96p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="1063"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
         <namedColor name="LoginButton">
             <color red="0.015686274509803921" green="0.52941176470588236" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

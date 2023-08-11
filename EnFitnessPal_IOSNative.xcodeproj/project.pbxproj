@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D412448C2A85E74900E51E8A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D412448B2A85E74900E51E8A /* TabBarController.m */; };
+		D412448F2A85E79700E51E8A /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D412448E2A85E79700E51E8A /* SettingsViewController.m */; };
+		D41244932A861E9100E51E8A /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = D41244922A861E9100E51E8A /* AFNetworking */; };
 		D46562BA2A7A4C2E004B8BF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D46562B92A7A4C2E004B8BF0 /* AppDelegate.m */; };
 		D46562BD2A7A4C2E004B8BF0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D46562BC2A7A4C2E004B8BF0 /* SceneDelegate.m */; };
 		D46562C02A7A4C2E004B8BF0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46562BF2A7A4C2E004B8BF0 /* LoginViewController.m */; };
@@ -15,12 +18,15 @@
 		D46562C82A7A4C30004B8BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46562C62A7A4C30004B8BF0 /* LaunchScreen.storyboard */; };
 		D46562CB2A7A4C30004B8BF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D46562CA2A7A4C30004B8BF0 /* main.m */; };
 		D49E32792A7CD63300F6052E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49E32782A7CD63300F6052E /* HomeViewController.m */; };
-		D49E327F2A7CF36000F6052E /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = D49E327E2A7CF36000F6052E /* AFNetworking */; };
 		D4ABC8002A832BD90007181F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4ABC7FF2A832BD90007181F /* RegisterViewController.m */; };
 		D4C1D2132A80A36B00BECA97 /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C1D2122A80A36B00BECA97 /* CustomTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D412448A2A85E74900E51E8A /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		D412448B2A85E74900E51E8A /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		D412448D2A85E79700E51E8A /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		D412448E2A85E79700E51E8A /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D46562B52A7A4C2E004B8BF0 /* EnFitnessPal_IOSNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnFitnessPal_IOSNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46562B82A7A4C2E004B8BF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D46562B92A7A4C2E004B8BF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D49E327F2A7CF36000F6052E /* AFNetworking in Frameworks */,
+				D41244932A861E9100E51E8A /* AFNetworking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,10 @@
 				D4C1D2122A80A36B00BECA97 /* CustomTableCell.m */,
 				D4ABC7FE2A832BD90007181F /* RegisterViewController.h */,
 				D4ABC7FF2A832BD90007181F /* RegisterViewController.m */,
+				D412448A2A85E74900E51E8A /* TabBarController.h */,
+				D412448B2A85E74900E51E8A /* TabBarController.m */,
+				D412448D2A85E79700E51E8A /* SettingsViewController.h */,
+				D412448E2A85E79700E51E8A /* SettingsViewController.m */,
 			);
 			path = EnFitnessPal_IOSNative;
 			sourceTree = "<group>";
@@ -118,7 +128,7 @@
 			);
 			name = EnFitnessPal_IOSNative;
 			packageProductDependencies = (
-				D49E327E2A7CF36000F6052E /* AFNetworking */,
+				D41244922A861E9100E51E8A /* AFNetworking */,
 			);
 			productName = EnFitnessPal_IOSNative;
 			productReference = D46562B52A7A4C2E004B8BF0 /* EnFitnessPal_IOSNative.app */;
@@ -148,7 +158,7 @@
 			);
 			mainGroup = D46562AC2A7A4C2E004B8BF0;
 			packageReferences = (
-				D49E327D2A7CF36000F6052E /* XCRemoteSwiftPackageReference "AFNetworking" */,
+				D41244912A861E9100E51E8A /* XCRemoteSwiftPackageReference "AFNetworking" */,
 			);
 			productRefGroup = D46562B62A7A4C2E004B8BF0 /* Products */;
 			projectDirPath = "";
@@ -180,8 +190,10 @@
 				D46562C02A7A4C2E004B8BF0 /* LoginViewController.m in Sources */,
 				D46562BA2A7A4C2E004B8BF0 /* AppDelegate.m in Sources */,
 				D46562CB2A7A4C30004B8BF0 /* main.m in Sources */,
+				D412448F2A85E79700E51E8A /* SettingsViewController.m in Sources */,
 				D49E32792A7CD63300F6052E /* HomeViewController.m in Sources */,
 				D4ABC8002A832BD90007181F /* RegisterViewController.m in Sources */,
+				D412448C2A85E74900E51E8A /* TabBarController.m in Sources */,
 				D46562BD2A7A4C2E004B8BF0 /* SceneDelegate.m in Sources */,
 				D4C1D2132A80A36B00BECA97 /* CustomTableCell.m in Sources */,
 			);
@@ -395,7 +407,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D49E327D2A7CF36000F6052E /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
+		D41244912A861E9100E51E8A /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AFNetworking/AFNetworking.git";
 			requirement = {
@@ -406,9 +418,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D49E327E2A7CF36000F6052E /* AFNetworking */ = {
+		D41244922A861E9100E51E8A /* AFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D49E327D2A7CF36000F6052E /* XCRemoteSwiftPackageReference "AFNetworking" */;
+			package = D41244912A861E9100E51E8A /* XCRemoteSwiftPackageReference "AFNetworking" */;
 			productName = AFNetworking;
 		};
 /* End XCSwiftPackageProductDependency section */
