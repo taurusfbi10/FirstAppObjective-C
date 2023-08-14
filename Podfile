@@ -4,8 +4,7 @@
 target 'EnFitnessPal_IOSNative' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  # Pods for EnFitnessPal_IOSNative
-	pod 'AFNetworking'
-	pod 'ChameleonFramework'
 
+  # Pods for EnFitnessPal_IOSNative
+  pod 'JTCalendar', '~> 2.0'
 end

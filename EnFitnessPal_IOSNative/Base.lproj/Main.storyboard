@@ -455,28 +455,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kn-Nu-XAc">
-                                <rect key="frame" x="25" y="372" width="325" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Custom Alert">
-                                    <backgroundConfiguration key="background" cornerRadius="17">
-                                        <color key="backgroundColor" name="LoginButton"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="showAlert:" destination="v5E-lG-kou" eventType="touchUpInside" id="Aud-Tg-vWR"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0f-iQ-C9u">
+                                <rect key="frame" x="0.0" y="50" width="375" height="679"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kn-Nu-XAc">
+                                        <rect key="frame" x="91.666666666666686" y="412.66666666666669" width="200" height="34.333333333333314"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="1gy-XQ-9Oa"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Custom Alert">
+                                            <backgroundConfiguration key="background" cornerRadius="17">
+                                                <color key="backgroundColor" name="LoginButton"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="showAlert:" destination="v5E-lG-kou" eventType="touchUpInside" id="Aud-Tg-vWR"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2q-rE-2pd" customClass="JTHorizontalCalendarView">
+                                        <rect key="frame" x="20" y="55" width="343" height="250"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="NdH-gv-fU0"/>
+                                            <constraint firstAttribute="height" constant="250" id="q9j-4k-uZU"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUb-Vi-h1S" customClass="JTCalendarMenuView">
+                                        <rect key="frame" x="20" y="20" width="343" height="25"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="65B-RH-jOo"/>
+                                            <constraint firstAttribute="height" constant="25" id="A5f-75-SUY"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="82" translatesAutoresizingMaskIntoConstraints="NO" id="j54-Dg-hgD">
+                                        <rect key="frame" x="20" y="328.33333333333331" width="343.33333333333331" height="34.333333333333314"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOV-Ch-fE9">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Today"/>
+                                                <connections>
+                                                    <action selector="didGoTodayTouch:" destination="v5E-lG-kou" eventType="touchUpInside" id="sM7-is-9OB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fi5-By-NcY">
+                                                <rect key="frame" x="212.66666666666669" y="0.0" width="130.66666666666669" height="34.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Change mode"/>
+                                                <connections>
+                                                    <action selector="didChangeModeTouch:" destination="v5E-lG-kou" eventType="touchUpInside" id="Oju-11-kGg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9Kn-Nu-XAc" firstAttribute="top" secondItem="j54-Dg-hgD" secondAttribute="bottom" constant="50" id="6t1-NX-vaN"/>
+                                    <constraint firstAttribute="trailing" secondItem="WUb-Vi-h1S" secondAttribute="trailing" constant="12" id="9Jc-dY-JWP"/>
+                                    <constraint firstItem="O2q-rE-2pd" firstAttribute="top" secondItem="WUb-Vi-h1S" secondAttribute="bottom" constant="10" id="CHz-8m-uZV"/>
+                                    <constraint firstItem="j54-Dg-hgD" firstAttribute="top" secondItem="O2q-rE-2pd" secondAttribute="bottom" constant="23.329999999999998" id="CaP-fS-Kat"/>
+                                    <constraint firstItem="WUb-Vi-h1S" firstAttribute="top" secondItem="h0f-iQ-C9u" secondAttribute="top" constant="20" symbolic="YES" id="EIl-3S-z0S"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Kn-Nu-XAc" secondAttribute="trailing" constant="83.333333333333314" id="MEk-zb-Qce"/>
+                                    <constraint firstItem="O2q-rE-2pd" firstAttribute="leading" secondItem="h0f-iQ-C9u" secondAttribute="leading" constant="20" symbolic="YES" id="O7x-ph-G13"/>
+                                    <constraint firstAttribute="trailing" secondItem="j54-Dg-hgD" secondAttribute="trailing" constant="11.666666666666686" id="SQL-uQ-CXB"/>
+                                    <constraint firstItem="9Kn-Nu-XAc" firstAttribute="centerX" secondItem="h0f-iQ-C9u" secondAttribute="centerX" id="bn0-c7-gZ5"/>
+                                    <constraint firstAttribute="bottom" secondItem="9Kn-Nu-XAc" secondAttribute="bottom" constant="20" symbolic="YES" id="bsz-s1-6ce"/>
+                                    <constraint firstItem="WUb-Vi-h1S" firstAttribute="leading" secondItem="h0f-iQ-C9u" secondAttribute="leading" constant="20" symbolic="YES" id="gWs-ai-Yjc"/>
+                                    <constraint firstAttribute="trailing" secondItem="O2q-rE-2pd" secondAttribute="trailing" constant="20" symbolic="YES" id="iGu-3y-tAY"/>
+                                    <constraint firstItem="9Kn-Nu-XAc" firstAttribute="leading" secondItem="h0f-iQ-C9u" secondAttribute="leading" constant="91.666666666666686" id="xqJ-bi-V0s"/>
+                                    <constraint firstItem="j54-Dg-hgD" firstAttribute="leading" secondItem="h0f-iQ-C9u" secondAttribute="leading" constant="20" symbolic="YES" id="xyb-St-GXJ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="IJr-j0-V4G"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="puW-mn-ECZ"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zdk-Z4-ZF7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9Kn-Nu-XAc" firstAttribute="centerX" secondItem="zdk-Z4-ZF7" secondAttribute="centerX" id="9Xa-iq-FCc"/>
-                            <constraint firstItem="9Kn-Nu-XAc" firstAttribute="centerY" secondItem="zdk-Z4-ZF7" secondAttribute="centerY" id="Be6-1q-2wj"/>
-                            <constraint firstItem="9Kn-Nu-XAc" firstAttribute="leading" secondItem="zdk-Z4-ZF7" secondAttribute="leading" constant="25" id="W5T-6T-OB4"/>
-                            <constraint firstItem="zdk-Z4-ZF7" firstAttribute="trailing" secondItem="9Kn-Nu-XAc" secondAttribute="trailing" constant="25" id="erV-mH-zeg"/>
+                            <constraint firstItem="zdk-Z4-ZF7" firstAttribute="top" secondItem="h0f-iQ-C9u" secondAttribute="top" id="Dsv-BH-fJN"/>
+                            <constraint firstItem="zdk-Z4-ZF7" firstAttribute="bottom" secondItem="h0f-iQ-C9u" secondAttribute="bottom" id="JYz-dl-yQU"/>
+                            <constraint firstItem="zdk-Z4-ZF7" firstAttribute="leading" secondItem="h0f-iQ-C9u" secondAttribute="leading" id="Wyl-rH-Gfv"/>
+                            <constraint firstItem="h0f-iQ-C9u" firstAttribute="trailing" secondItem="zdk-Z4-ZF7" secondAttribute="trailing" id="XYD-Jc-EvU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="wUr-ai-hPU">
@@ -491,8 +554,12 @@
                     <connections>
                         <outlet property="alertView" destination="mFT-nt-wdR" id="ZR6-IS-eYU"/>
                         <outlet property="blurView" destination="8lf-b7-K9x" id="gQY-XU-V1G"/>
+                        <outlet property="calendarContentView" destination="O2q-rE-2pd" id="w6N-AM-B2N"/>
+                        <outlet property="calendarMenuView" destination="WUb-Vi-h1S" id="F8R-X1-RLv"/>
                         <outlet property="cancelBtn" destination="pKD-es-Oeg" id="zgG-HG-a9Z"/>
+                        <outlet property="datePicker" destination="gpO-oX-ANZ" id="58h-mr-STR"/>
                         <outlet property="okBtn" destination="fr5-pA-SXb" id="Tbk-Yi-8zU"/>
+                        <outlet property="scrollViewSetting" destination="h0f-iQ-C9u" id="qEL-jX-DRn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gRW-Gy-UWT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -506,11 +573,11 @@
                     <blurEffect style="dark"/>
                 </visualEffectView>
                 <view contentMode="scaleToFill" id="mFT-nt-wdR">
-                    <rect key="frame" x="0.0" y="0.0" width="250" height="140"/>
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fr5-pA-SXb">
-                            <rect key="frame" x="0.0" y="105" width="125" height="35"/>
+                            <rect key="frame" x="0.0" y="154" width="175" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="OK">
@@ -526,7 +593,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKD-es-Oeg">
-                            <rect key="frame" x="125" y="105" width="125" height="35"/>
+                            <rect key="frame" x="175" y="154" width="175" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Cancel">
@@ -540,12 +607,21 @@
                                 <action selector="cancelBtn:" destination="v5E-lG-kou" eventType="touchUpInside" id="gFk-0L-J2a"/>
                             </connections>
                         </button>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="gpO-oX-ANZ">
+                            <rect key="frame" x="112" y="57" width="126" height="34"/>
+                        </datePicker>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="M9A-lC-UnN"/>
-                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="M9A-lC-UnN" firstAttribute="trailing" secondItem="gpO-oX-ANZ" secondAttribute="trailing" constant="112" id="CnW-A8-R8O"/>
+                        <constraint firstItem="gpO-oX-ANZ" firstAttribute="top" secondItem="M9A-lC-UnN" secondAttribute="top" constant="7" id="Zp4-bV-Yry"/>
+                        <constraint firstItem="M9A-lC-UnN" firstAttribute="bottom" secondItem="gpO-oX-ANZ" secondAttribute="bottom" constant="75" id="lJU-Os-iKi"/>
+                        <constraint firstItem="gpO-oX-ANZ" firstAttribute="leading" secondItem="M9A-lC-UnN" secondAttribute="leading" constant="112" id="yak-VK-3yW"/>
+                    </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2806" y="1309"/>
+            <point key="canvasLocation" x="2805.5999999999999" y="1308.6206896551726"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C9p-dk-0xM">
@@ -593,9 +669,6 @@
         <namedColor name="LoginButton">
             <color red="0.015686274509803921" green="0.52941176470588236" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

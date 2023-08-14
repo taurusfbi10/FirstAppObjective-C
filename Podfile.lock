@@ -1,36 +1,16 @@
 PODS:
-  - AFNetworking (4.0.1):
-    - AFNetworking/NSURLSession (= 4.0.1)
-    - AFNetworking/Reachability (= 4.0.1)
-    - AFNetworking/Security (= 4.0.1)
-    - AFNetworking/Serialization (= 4.0.1)
-    - AFNetworking/UIKit (= 4.0.1)
-  - AFNetworking/NSURLSession (4.0.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (4.0.1)
-  - AFNetworking/Security (4.0.1)
-  - AFNetworking/Serialization (4.0.1)
-  - AFNetworking/UIKit (4.0.1):
-    - AFNetworking/NSURLSession
-  - ChameleonFramework (2.1.0):
-    - ChameleonFramework/Default (= 2.1.0)
-  - ChameleonFramework/Default (2.1.0)
+  - JTCalendar (2.2.6)
 
 DEPENDENCIES:
-  - AFNetworking
-  - ChameleonFramework
+  - JTCalendar (~> 2.0)
 
 SPEC REPOS:
   trunk:
-    - AFNetworking
-    - ChameleonFramework
+    - JTCalendar
 
 SPEC CHECKSUMS:
-  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
-  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  JTCalendar: 1b326e0d59dd1855b52c5f3feb059d2ff953805d
 
-PODFILE CHECKSUM: 85b6a421616d3683ec2674cf36b2181318254ac3
+PODFILE CHECKSUM: 5f1ff081c794b3b5fef641f4f44bd91eff37a0d4
 
 COCOAPODS: 1.12.1

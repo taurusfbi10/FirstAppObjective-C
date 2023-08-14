@@ -61,10 +61,6 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setBool:NO forKey:@"isLoggedIn"];
     [userDefaults synchronize];
-//    LoginViewController *loginNav = [self.storyboard instantiateViewControllerWithIdentifier:@"Login"];
-////    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:loginNav];
-//    [self.navigationController initWithRootViewController:loginNav];
-//    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"switchToLogin" object:nil];
 }
 
