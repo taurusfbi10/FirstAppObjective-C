@@ -2,12 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KBy-6F-Fgr">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -440,6 +440,7 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="mHt-E2-gqK"/>
                     <connections>
+                        <outlet property="localNotificationbtn" destination="RfQ-TJ-DS8" id="Yc1-0Q-P3b"/>
                         <outlet property="tableView" destination="VU7-an-PPI" id="dRd-1x-diL"/>
                     </connections>
                 </viewController>
@@ -656,16 +657,96 @@
                     <connections>
                         <segue destination="qQh-Qo-n0w" kind="relationship" relationship="viewControllers" id="MOk-43-w2V"/>
                         <segue destination="v5E-lG-kou" kind="relationship" relationship="viewControllers" id="FrQ-tO-i3f"/>
+                        <segue destination="Q2D-hU-VED" kind="relationship" relationship="viewControllers" id="mjq-Du-cxf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czd-Th-96p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="1063"/>
         </scene>
+        <!--Profile-->
+        <scene sceneID="fea-MC-Vn3">
+            <objects>
+                <viewController id="Q2D-hU-VED" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yWl-64-PN3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OPm-1g-lef">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="344"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EzQ-dn-pha">
+                                    <size key="itemSize" width="375" height="344"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" translatesAutoresizingMaskIntoConstraints="NO" id="OA0-Ew-MRR" customClass="CellPageControl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="344"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1aw-QV-Pfc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="344"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzy-D7-svb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="344"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="215" id="CDb-aO-5r2"/>
+                                                        <constraint firstAttribute="width" constant="371" id="PTj-K0-OUg"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="nzy-D7-svb" secondAttribute="bottom" id="9AX-q1-tnW"/>
+                                                <constraint firstItem="nzy-D7-svb" firstAttribute="leading" secondItem="1aw-QV-Pfc" secondAttribute="leading" id="B8U-sY-ryP"/>
+                                                <constraint firstItem="nzy-D7-svb" firstAttribute="top" secondItem="1aw-QV-Pfc" secondAttribute="top" id="QF9-1H-61i"/>
+                                                <constraint firstItem="nzy-D7-svb" firstAttribute="centerX" secondItem="1aw-QV-Pfc" secondAttribute="centerX" id="Sgq-wB-0tI"/>
+                                                <constraint firstItem="nzy-D7-svb" firstAttribute="centerY" secondItem="1aw-QV-Pfc" secondAttribute="centerY" id="XJt-d2-TDc"/>
+                                                <constraint firstAttribute="trailing" secondItem="nzy-D7-svb" secondAttribute="trailing" id="Z7a-2b-0SZ"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="375" height="344"/>
+                                        <connections>
+                                            <outlet property="imagePage" destination="nzy-D7-svb" id="NUL-Dk-w4C"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ryn-oc-dDO">
+                                <rect key="frame" x="129" y="610" width="116" height="26"/>
+                                <color key="pageIndicatorTintColor" name="LoginButton"/>
+                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4tf-sk-R73"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OPm-1g-lef" firstAttribute="top" secondItem="yWl-64-PN3" secondAttribute="top" id="1yl-NA-ZfV"/>
+                            <constraint firstItem="4tf-sk-R73" firstAttribute="trailing" secondItem="ryn-oc-dDO" secondAttribute="trailing" constant="130" id="ISs-yX-VnT"/>
+                            <constraint firstItem="ryn-oc-dDO" firstAttribute="top" secondItem="OPm-1g-lef" secondAttribute="bottom" constant="266" id="Mww-tX-mxD"/>
+                            <constraint firstItem="OPm-1g-lef" firstAttribute="trailing" secondItem="4tf-sk-R73" secondAttribute="trailing" id="Xtv-2f-fBC"/>
+                            <constraint firstItem="4tf-sk-R73" firstAttribute="bottom" secondItem="ryn-oc-dDO" secondAttribute="bottom" constant="93" id="Yi3-Tz-avy"/>
+                            <constraint firstItem="ryn-oc-dDO" firstAttribute="leading" secondItem="4tf-sk-R73" secondAttribute="leading" constant="129" id="Zta-aj-vm6"/>
+                            <constraint firstItem="OPm-1g-lef" firstAttribute="leading" secondItem="4tf-sk-R73" secondAttribute="leading" id="bti-Y2-9iK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" id="gA6-Nh-QOJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="OPm-1g-lef" id="sfv-Xw-i5w"/>
+                        <outlet property="pageControl" destination="ryn-oc-dDO" id="Hjg-oc-kiV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRH-g5-zjv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912.79999999999995" y="1528.8177339901479"/>
+        </scene>
     </scenes>
     <resources>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="image1" width="626" height="416"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="LoginButton">
             <color red="0.015686274509803921" green="0.52941176470588236" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

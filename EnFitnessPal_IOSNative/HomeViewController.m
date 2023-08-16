@@ -40,6 +40,11 @@
     NSObject *userStore = [[NSUserDefaults standardUserDefaults] objectForKey:@"userStore"];
 //    NSDictionary *parsedObject =  [NSJSONSerialization JSONObjectWithData:userStore options:kNilOptions error:nil];
     NSLog(@"userStore: %@",userStore);
+    self.localNotificationbtn.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.localNotificationbtn.layer.shadowOffset = CGSizeMake(0, 3);
+    self.localNotificationbtn.layer.shadowOpacity = 0.5;
+    self.localNotificationbtn.layer.shadowRadius = 4;
+    self.localNotificationbtn.layer.masksToBounds = NO;
 }
 - (IBAction)btnLocalNotification:(id)sender {
     if (isGrantedNotificationAccess) {

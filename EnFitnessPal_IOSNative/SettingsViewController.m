@@ -23,17 +23,6 @@
 
 @implementation SettingsViewController
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if(!self){
-        return nil;
-    }
-    
-    self.title = @"Basic";
-    
-    return self;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,7 +40,6 @@
     
     // Create a min and max date for limit the calendar, optional
     [self createMinAndMaxDate];
-    
     [_calendarManager setMenuView:_calendarMenuView];
     [_calendarManager setContentView:_calendarContentView];
     [_calendarManager setDate:[NSDate date]];

@@ -12,6 +12,7 @@
 
 @interface HomeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIButton *localNotificationbtn;
 
 @property (strong, nonatomic) NSMutableArray *data;
 

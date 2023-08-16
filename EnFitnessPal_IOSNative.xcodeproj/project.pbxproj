@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C9578FC620A60E3B17B4391 /* Pods_EnFitnessPal_IOSNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E193D253BC787DD24DA9672F /* Pods_EnFitnessPal_IOSNative.framework */; };
+		05A34E85B7CF6864C0C20365 /* Pods_EnFitnessPal_IOSNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66085FAE61C5710AA9F93DDE /* Pods_EnFitnessPal_IOSNative.framework */; };
 		D412448C2A85E74900E51E8A /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D412448B2A85E74900E51E8A /* TabBarController.m */; };
 		D412448F2A85E79700E51E8A /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D412448E2A85E79700E51E8A /* SettingsViewController.m */; };
 		D41244932A861E9100E51E8A /* AFNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = D41244922A861E9100E51E8A /* AFNetworking */; };
+		D42A2F8F2A8B50E300A13EC2 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42A2F8E2A8B50E300A13EC2 /* ProfileViewController.m */; };
 		D46562BA2A7A4C2E004B8BF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D46562B92A7A4C2E004B8BF0 /* AppDelegate.m */; };
 		D46562BD2A7A4C2E004B8BF0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D46562BC2A7A4C2E004B8BF0 /* SceneDelegate.m */; };
 		D46562C02A7A4C2E004B8BF0 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46562BF2A7A4C2E004B8BF0 /* LoginViewController.m */; };
@@ -18,6 +19,7 @@
 		D46562C52A7A4C30004B8BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D46562C42A7A4C30004B8BF0 /* Assets.xcassets */; };
 		D46562C82A7A4C30004B8BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46562C62A7A4C30004B8BF0 /* LaunchScreen.storyboard */; };
 		D46562CB2A7A4C30004B8BF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D46562CA2A7A4C30004B8BF0 /* main.m */; };
+		D47220892A8C62640006B49F /* CellPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D47220882A8C62640006B49F /* CellPageControl.m */; };
 		D49E32792A7CD63300F6052E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D49E32782A7CD63300F6052E /* HomeViewController.m */; };
 		D4ABC8002A832BD90007181F /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4ABC7FF2A832BD90007181F /* RegisterViewController.m */; };
 		D4C1D2132A80A36B00BECA97 /* CustomTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C1D2122A80A36B00BECA97 /* CustomTableCell.m */; };
@@ -37,13 +39,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		283756774A3E425FF9AFCDBA /* Pods-EnFitnessPal_IOSNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnFitnessPal_IOSNative.debug.xcconfig"; path = "Target Support Files/Pods-EnFitnessPal_IOSNative/Pods-EnFitnessPal_IOSNative.debug.xcconfig"; sourceTree = "<group>"; };
-		A0AB715145C3D82F56DD538B /* Pods-EnFitnessPal_IOSNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnFitnessPal_IOSNative.release.xcconfig"; path = "Target Support Files/Pods-EnFitnessPal_IOSNative/Pods-EnFitnessPal_IOSNative.release.xcconfig"; sourceTree = "<group>"; };
+		275861DE553AC71EC5CA01E3 /* Pods-EnFitnessPal_IOSNative.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnFitnessPal_IOSNative.debug.xcconfig"; path = "Target Support Files/Pods-EnFitnessPal_IOSNative/Pods-EnFitnessPal_IOSNative.debug.xcconfig"; sourceTree = "<group>"; };
+		66085FAE61C5710AA9F93DDE /* Pods_EnFitnessPal_IOSNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnFitnessPal_IOSNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D412448A2A85E74900E51E8A /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		D412448B2A85E74900E51E8A /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		D412448D2A85E79700E51E8A /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		D412448E2A85E79700E51E8A /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		D425E84E2A89C2F70079FEA1 /* EnFitnessPal_IOSNative */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EnFitnessPal_IOSNative; sourceTree = "<group>"; };
+		D42A2F8D2A8B50E300A13EC2 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		D42A2F8E2A8B50E300A13EC2 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		D46562B52A7A4C2E004B8BF0 /* EnFitnessPal_IOSNative.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnFitnessPal_IOSNative.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D46562B82A7A4C2E004B8BF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D46562B92A7A4C2E004B8BF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,13 +60,15 @@
 		D46562C72A7A4C30004B8BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D46562C92A7A4C30004B8BF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D46562CA2A7A4C30004B8BF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D47220872A8C62640006B49F /* CellPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellPageControl.h; sourceTree = "<group>"; };
+		D47220882A8C62640006B49F /* CellPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellPageControl.m; sourceTree = "<group>"; };
 		D49E32772A7CD63300F6052E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D49E32782A7CD63300F6052E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		D4ABC7FE2A832BD90007181F /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		D4ABC7FF2A832BD90007181F /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		D4C1D2112A80A36B00BECA97 /* CustomTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableCell.h; sourceTree = "<group>"; };
 		D4C1D2122A80A36B00BECA97 /* CustomTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableCell.m; sourceTree = "<group>"; };
-		E193D253BC787DD24DA9672F /* Pods_EnFitnessPal_IOSNative.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnFitnessPal_IOSNative.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7C3493B638C4046AC1553E /* Pods-EnFitnessPal_IOSNative.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnFitnessPal_IOSNative.release.xcconfig"; path = "Target Support Files/Pods-EnFitnessPal_IOSNative/Pods-EnFitnessPal_IOSNative.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D41244932A861E9100E51E8A /* AFNetworking in Frameworks */,
-				3C9578FC620A60E3B17B4391 /* Pods_EnFitnessPal_IOSNative.framework in Frameworks */,
+				05A34E85B7CF6864C0C20365 /* Pods_EnFitnessPal_IOSNative.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				D425E84E2A89C2F70079FEA1 /* EnFitnessPal_IOSNative */,
-				E193D253BC787DD24DA9672F /* Pods_EnFitnessPal_IOSNative.framework */,
+				66085FAE61C5710AA9F93DDE /* Pods_EnFitnessPal_IOSNative.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,8 +96,8 @@
 		2DD34D5AAD77180454C64682 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				283756774A3E425FF9AFCDBA /* Pods-EnFitnessPal_IOSNative.debug.xcconfig */,
-				A0AB715145C3D82F56DD538B /* Pods-EnFitnessPal_IOSNative.release.xcconfig */,
+				275861DE553AC71EC5CA01E3 /* Pods-EnFitnessPal_IOSNative.debug.xcconfig */,
+				DD7C3493B638C4046AC1553E /* Pods-EnFitnessPal_IOSNative.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -138,6 +144,10 @@
 				D412448B2A85E74900E51E8A /* TabBarController.m */,
 				D412448D2A85E79700E51E8A /* SettingsViewController.h */,
 				D412448E2A85E79700E51E8A /* SettingsViewController.m */,
+				D42A2F8D2A8B50E300A13EC2 /* ProfileViewController.h */,
+				D42A2F8E2A8B50E300A13EC2 /* ProfileViewController.m */,
+				D47220872A8C62640006B49F /* CellPageControl.h */,
+				D47220882A8C62640006B49F /* CellPageControl.m */,
 			);
 			path = EnFitnessPal_IOSNative;
 			sourceTree = "<group>";
@@ -149,12 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D46562CE2A7A4C30004B8BF0 /* Build configuration list for PBXNativeTarget "EnFitnessPal_IOSNative" */;
 			buildPhases = (
-				D01D5388968E7083514049CC /* [CP] Check Pods Manifest.lock */,
+				E736CD2E386BC777208E5CF7 /* [CP] Check Pods Manifest.lock */,
 				D46562B12A7A4C2E004B8BF0 /* Sources */,
 				D46562B22A7A4C2E004B8BF0 /* Frameworks */,
 				D46562B32A7A4C2E004B8BF0 /* Resources */,
 				D425E81C2A89BF690079FEA1 /* Embed Frameworks */,
-				87A1E687E594E052DE9B3971 /* [CP] Embed Pods Frameworks */,
+				3D8212F46303F8F0042CD9A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,7 +202,7 @@
 			);
 			mainGroup = D46562AC2A7A4C2E004B8BF0;
 			packageReferences = (
-				D41244912A861E9100E51E8A /* XCRemoteSwiftPackageReference "AFNetworking" */,
+				D41244912A861E9100E51E8A /* XCRemoteSwiftPackageReference "AFNetworking.git" */,
 			);
 			productRefGroup = D46562B62A7A4C2E004B8BF0 /* Products */;
 			projectDirPath = "";
@@ -217,7 +227,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		87A1E687E594E052DE9B3971 /* [CP] Embed Pods Frameworks */ = {
+		3D8212F46303F8F0042CD9A1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -234,7 +244,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EnFitnessPal_IOSNative/Pods-EnFitnessPal_IOSNative-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D01D5388968E7083514049CC /* [CP] Check Pods Manifest.lock */ = {
+		E736CD2E386BC777208E5CF7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -266,7 +276,9 @@
 				D46562C02A7A4C2E004B8BF0 /* LoginViewController.m in Sources */,
 				D46562BA2A7A4C2E004B8BF0 /* AppDelegate.m in Sources */,
 				D46562CB2A7A4C30004B8BF0 /* main.m in Sources */,
+				D47220892A8C62640006B49F /* CellPageControl.m in Sources */,
 				D412448F2A85E79700E51E8A /* SettingsViewController.m in Sources */,
+				D42A2F8F2A8B50E300A13EC2 /* ProfileViewController.m in Sources */,
 				D49E32792A7CD63300F6052E /* HomeViewController.m in Sources */,
 				D4ABC8002A832BD90007181F /* RegisterViewController.m in Sources */,
 				D412448C2A85E74900E51E8A /* TabBarController.m in Sources */,
@@ -409,7 +421,7 @@
 		};
 		D46562CF2A7A4C30004B8BF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 283756774A3E425FF9AFCDBA /* Pods-EnFitnessPal_IOSNative.debug.xcconfig */;
+			baseConfigurationReference = 275861DE553AC71EC5CA01E3 /* Pods-EnFitnessPal_IOSNative.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -422,7 +434,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,7 +449,7 @@
 		};
 		D46562D02A7A4C30004B8BF0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0AB715145C3D82F56DD538B /* Pods-EnFitnessPal_IOSNative.release.xcconfig */;
+			baseConfigurationReference = DD7C3493B638C4046AC1553E /* Pods-EnFitnessPal_IOSNative.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -450,7 +462,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,7 +499,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D41244912A861E9100E51E8A /* XCRemoteSwiftPackageReference "AFNetworking" */ = {
+		D41244912A861E9100E51E8A /* XCRemoteSwiftPackageReference "AFNetworking.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AFNetworking/AFNetworking.git";
 			requirement = {
@@ -500,7 +512,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		D41244922A861E9100E51E8A /* AFNetworking */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D41244912A861E9100E51E8A /* XCRemoteSwiftPackageReference "AFNetworking" */;
+			package = D41244912A861E9100E51E8A /* XCRemoteSwiftPackageReference "AFNetworking.git" */;
 			productName = AFNetworking;
 		};
 /* End XCSwiftPackageProductDependency section */

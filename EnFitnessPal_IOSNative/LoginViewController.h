@@ -19,7 +19,6 @@
 
 - (void) styleTextField: (UITextField *)textField  isPassword: (BOOL)isPassword;
 
-- (void) setupContraintsTextField: (UITextField *)textField;
 
 @end
 
